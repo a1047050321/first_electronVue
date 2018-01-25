@@ -1,0 +1,28 @@
+[{
+    "statDate":"2016",
+    "interval":20,
+    "minimum":0,
+    "maximum":100,
+    "data":[["1","123T"],["2","34T"],["3","23G"],["4","53T"],["5","4T"],["6","35T"],["7","23T"],["8","0T"]]
+},{
+    "statDate":"2016",
+    "interval":100,
+    "minimum":0,
+    "maximum":500,
+    "data":[["1","345G"],["2","123G"],["3","31G"],["4","43G"],["5","321G"],["6","2G"],["7","13G"],["8","0G"]]
+},{
+    "dsn":"KDNY4FKDKSFKJ",
+    "readRating":"500GB/s",
+    "writeRating":"500GB/s",
+    "ip":"192.168.10.321",
+    "port":100,
+    "did":"11",
+    "msn":"PHWA6274021X800HGN",
+    "status":"在线",
+    "blocks":230000,
+    "blocksBrokenMax":12,
+    "blockSize":"8T",
+    "totalBlock":111,
+    "startDate":"2013-10-01",
+    "endDate":"2013-10-01"
+}]

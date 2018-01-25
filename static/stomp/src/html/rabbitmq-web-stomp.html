@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery/jquery-1.9.1.min.js"></script>
+    <script src="rabbitmq/sockjs-0.3.js"></script>
+    <script src="rabbitmq/stomp.js"></script>
+    <style>
+
+    </style>
+    <title>RabbitMQ Web STOMP Examples : Echo Server</title>
+    <!--<link href="main.css" rel="stylesheet" type="text/css" />-->
+</head>
+
+<body lang="en">
+
+    <form class="form"><input class="input" autocomplete="off" value="Type here..."></input>
+    </form>
+    </div>
+
+    <script>
+        var has_had_focus = false;
+        var pipe = function(send) {
+            var inp = $('.input');
+            var form = $('.form');
+            if (send) {
+                form.submit(function() {
+                    send(inp.val());
+                    inp.val('');
+                    return false;
+                });
+            }
+            return function() {};
+        };
+
+        // Stomp.js boilerplate
+        if (location.search == '?ws') {
+            var client = Stomp.client('ws://104.128.92.37:15674/ws');
+        } else {
+            var ws = new SockJS('http://104.128.92.37:15674/stomp');
+            var client = Stomp.over(ws);
+        }
+
+        console.log(client.debug);
+        var print_first = pipe(function(data) {
+            client.send('/queue/hello', {
+                "content-type": "application/json"
+            }, data);
+        });
+        var on_connect = function(x) {
+            id = client.subscribe("/queue/hello", function(d) {
+                console.log(d);
+                print_first(d.body);
+            });
+        };
+        var on_error = function() {
+            client.connect('admin', 'admin', on_connect, on_error, '/');
+            console.log('error');
+        };
+        client.connect('admin', 'admin', on_connect, on_error, '/');
+
+        $('.input').focus(function() {
+            if (!has_had_focus) {
+                has_had_focus = true;
+                $(this).val("");
+            }
+        });
+    </script>
+</body>
+
+</html>

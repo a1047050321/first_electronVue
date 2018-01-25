@@ -1,0 +1,306 @@
+#app {
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.app-content {
+    height: 100%;
+}
+
+
+/* 左边菜单栏 start */
+
+.menu-wrapper {
+    width: 240px;
+    height: 100%;
+    padding-top: 64px;
+    background-color: #20A0FF;
+    color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* 隐藏滚动条，但依旧具备可以滚动的功能 */
+
+.menu-wrapper::scrollbar {
+    width: 0px;
+}
+
+.menu-wrapper::-webkit-scrollbar {
+    display: none
+}
+
+
+/* 隐藏滚动条*/
+
+html {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+.nav-exit {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    left: 24px;
+    bottom: 48px;
+}
+
+.nav-exit i {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-exit span {
+    display: inline-block;
+    margin-left: 16px;
+    font-size: 12px;
+}
+
+.footContent {
+    position: absolute;
+    bottom: 0;
+    left: 240px;
+    right: 0;
+    text-align: center;
+}
+
+.exit-list {
+    text-align: center;
+    font-size: 12px;
+}
+
+.exit-list li {
+    line-height: 24px;
+}
+
+.exit-list li:hover {
+    cursor: pointer;
+    color: #20A0FF;
+}
+
+
+/* 左边菜单栏 end */
+
+
+/* 右边内容区 start */
+
+.content-wrapper {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 264px;
+    right: 24px;
+}
+
+
+/* 右边内容区 end */
+
+
+/* 底部区 start */
+
+.app-footer {
+    width: 100%;
+    height: 84px;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    font-size: 12px;
+}
+
+.app-footer>div:first-child {
+    text-align: center;
+    height: 100%;
+    line-height: 40px;
+    background-color: #20A0FF;
+    color: #fff;
+}
+
+.app-footer>div:last-child {
+    color: #646464;
+    text-align: center;
+    background-color: #fff;
+}
+
+
+/* 底部区 end */
+
+
+/* 头部导航区 start */
+
+.nav-wrapper {
+    padding: 24px 0;
+    border-bottom: 1px solid #E5E9F2;
+    position: relative;
+    height: 64px;
+}
+
+.nav-wrapper>.el-breadcrumb {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.nav-wrapper>.el-tabs {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    bottom: -17px;
+}
+
+.nav-wrapper>.el-button {
+    display: inline-block;
+    position: absolute;
+    right: 20px
+}
+
+
+/* 头部导航区 end */
+
+
+/* 表格区 start */
+
+.pager-wrapper {
+    margin-top: 10px;
+}
+
+.table-wrapper a:link {
+    color: #20a0ff;
+}
+
+.el-table__body-wrapper {
+    overflow-x: hidden;
+}
+
+
+/* 表格区 end */
+
+
+/* 翻页 */
+
+.block {
+    position: fixed;
+    bottom: 84px;
+    left: 264px;
+    padding: 0;
+}
+
+.el-pagination {
+    padding: 0;
+}
+
+.name-wrapper:hover {
+    curosr: pointer
+}
+
+.el-table__column-filter-trigger {
+    display: inline-block;
+    line-height: 34px;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.el-table__column-filter-trigger i {
+    font-size: 14px;
+}
+
+.menu-content.el-menu,
+.menu-content .el-submenu .el-menu {
+    background-color: #20A0FF;
+}
+
+.menu-content .el-submenu__title,
+.menu-content .el-menu-item {
+    color: #fff;
+}
+
+.menu-content>li {
+    text-align: left;
+    margin: 0;
+}
+
+.el-submenu .el-menu-item {
+    height: 42px;
+    line-height: 42px;
+    font-size: 12px;
+    font-size: 14px;
+}
+
+.el-menu {
+    border: none!important;
+}
+
+.el-menu-item {
+    height: 42px;
+    line-height: 42px;
+}
+
+li.el-menu-item span {
+    font-size: 12px;
+}
+
+.menu-content .el-menu-item:hover {
+    background-color: #58B7FF;
+}
+
+.menu-content .el-submenu__title span,
+.menu-content>.el-menu-item span {
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+}
+
+.menu-content .el-submenu__title {
+    height: 42px;
+    line-height: 42px;
+}
+
+.menu-content .el-submenu__title:hover {
+    background-color: #20A0FF;
+}
+
+.menu-content .router-link-active {
+    background-color: #1D8CE0;
+}
+
+.menu-content>li div i,
+li.el-menu-item i {
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+    margin-bottom: 3px;
+}
+
+.menu-content>li div span,
+li.el-menu-item span {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.el-menu-item-group ul li.el-menu-item {
+    width: 100%;
+    display: inline-block;
+    padding-left: 64px;
+}
+
+.is-opened i.el-icon-arrow-down {
+    width: 12px;
+    height: 12px;
+}
+
+.el-submenu__icon-arrow.el-icon-arrow-down {
+    width: 12px;
+    height: 12px;
+}
+
+.el-badge__content.is-fixed.is-dot {
+    right: 0;
+    top: 10px;
+}
+
+.icon.el-icon-question {
+    width: 24px;
+    height: 24px;
+}

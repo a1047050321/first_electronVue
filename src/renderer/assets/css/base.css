@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    font-family: Arial, "宋体", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: none;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    border-color: #ccc;
+    border-bottom-width: 0px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th {
+    height: 46px;
+    font-size: 13px;
+}
+
+table td {
+    /* height:30px; */
+    font-size: 12px;
+}
+
+iframe {
+    border: 0px;
+    display: block;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.border-box {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+.content-box {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    -ms-box-sizing: border-box;
+}
+
+.user-select-none,
+.user-select-none * {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 100%;
+}
+
+
+/* 清浮动 */
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* 图标 */
+
+.icon {
+    display: inline-block;
+    font-style: normal;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    vertical-align: middle;
+}
+
+.icon-manage {
+    background-image: url("../images/icon_manage.png");
+}
+
+.icon-must {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-image: url("../images/icon_must.png");
+    background-size: 8px;
+}
+
+.icon-success {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/icon_success.png");
+    background-size: 50px;
+}
+
+.icon-person {
+    background-image: url("../images/icon_person.png");
+}
+
+.icon-content {
+    background-image: url("../images/icon_content.png");
+}
+
+.icon-setting {
+    background-image: url("../images/icon_setting.png");
+}
+
+.icon-single {
+    background-image: url("../images/icon_single.png");
+}
+
+.icon-home {
+    background-image: url("../images/icon_home.png");
+}
+
+.icon-edit {
+    background-size: 25px;
+    background-image: url("../images/icon_edit.png");
+}
+
+.icon_echarts {
+    background-image: url("../images/icon_echarts.png");
+}
+
+.icon_monitor {
+    background-size: 21px;
+    background-image: url("../images/icon_monitor.png");
+}
+
+.icon_editt {
+    background-size: 21px;
+    background-image: url("../images/icon_editt.png");
+}
+
+.icon_info {
+    background-size: 21px;
+    background-image: url("../images/icon_info.png");
+}
